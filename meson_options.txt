@@ -1,0 +1,5 @@
+option('lua_linux_use_readline',
+	type: 'boolean',
+	value: false,
+	yield: true,
+)
