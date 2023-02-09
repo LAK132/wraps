@@ -5,8 +5,10 @@ cc = meson.get_compiler('c')
 
 if cc.get_id() == 'msvc'
 	version = 'c99'
+	link_args = []
 else
 	version = 'gnu99'
+	link_args = ['-lm']
 endif
 
 if target_machine.system() == 'cygwin'
@@ -94,6 +96,7 @@ lua_core = static_library(
 		'lzio.c',
 	],
 	dependencies: lua_dependencies,
+	link_args: link_args,
 	override_options: 'c_std=' + version,
 )
 
@@ -119,6 +122,7 @@ lua_lib = static_library(
 		'lutf8lib.c',
 	],
 	dependencies: lua_dependencies,
+	link_args: link_args,
 	override_options: 'c_std=' + version,
 )
 
@@ -132,10 +136,12 @@ lua = executable(
 	'lua',
 	['lua.c'],
 	dependencies: [lua_lib_dep],
+	link_args: link_args,
 )
 
 luac = executable(
 	'luac',
 	['luac.c'],
 	dependencies: [lua_lib_dep],
+	link_args: link_args,
 )
