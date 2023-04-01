@@ -14,6 +14,12 @@ sdl2_opts.add_cmake_defines({
 	'SDL_DISABLE_INSTALL': 'ON',
 })
 
+if get_option('b_vscrt') == 'mt' or get_option('b_vscrt') == 'mtd' or get_option('b_vscrt') == 'static_from_buildtype'
+	sdl2_opts.add_cmake_defines({
+		'SDL_FORCE_STATIC_VCRT': 'ON',
+	})
+endif
+
 sdl2_subprj = cmake.subproject('SDL2-wrap', options: sdl2_opts)
 
 sdl2_dep = declare_dependency(
