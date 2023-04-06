@@ -37,11 +37,15 @@ elif target_machine.system() == 'linux'
 elif target_machine.system() == 'darwin'
 	c_args += [
 		'-DLUA_USE_MACOSX',
-		'-DLUA_USE_READLINE',
 	]
-	lua_dependencies += [
-		dependency('readline'),
-	]
+	if get_option('lua_darwin_use_readline')
+		c_args += [
+			'-DLUA_USE_READLINE',
+		]
+		lua_dependencies += [
+			dependency('readline'),
+		]
+	endif
 elif target_machine.system() == 'sunos'
 	c_args += [
 		'-DLUA_USE_POSIX',
