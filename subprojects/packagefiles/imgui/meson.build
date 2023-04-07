@@ -16,6 +16,9 @@ imgui = static_library(
 		'imgui_widgets.cpp',
 		'imgui.cpp',
 	],
+	override_options: [
+		'cpp_std=c++11',
+	],
 	include_directories: includes,
 )
 

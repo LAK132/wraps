@@ -3,8 +3,7 @@
 
 #include "color.h"
 #include "defines.h"
-#include <stdio.h>
-#include <stdlib.h>
+#include <cstdlib>
 
 enum class texture_type_t
 {
@@ -139,21 +138,15 @@ struct texture_t : public texture_base_t
 
 	FORCE_INLINE COLOR &at(size_t x, size_t y)
 	{
-		if (x > w || y > h)
-		{
-			printf("%zu, %zu\n", x, y);
-			std::abort();
-		}
+		assert(x <= w);
+		assert(y <= h);
 		return reinterpret_cast<COLOR *>(pixels)[x + (w * y)];
 	}
 
 	FORCE_INLINE const COLOR &at(size_t x, size_t y) const
 	{
-		if (x > w || y > h)
-		{
-			printf("%zu, %zu\n", x, y);
-			std::abort();
-		}
+		assert(x <= w);
+		assert(y <= h);
 		return reinterpret_cast<COLOR *>(pixels)[x + (w * y)];
 	}
 };
