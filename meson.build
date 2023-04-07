@@ -22,8 +22,30 @@ endif
 
 sdl2_subprj = cmake.subproject('SDL2-wrap', options: sdl2_opts)
 
+if target_machine.system() == 'darwin'
+	extra_deps = [
+		dependency('CoreVideo'),
+		dependency('Cocoa'),
+		dependency('IOKit'),
+		dependency('ForceFeedback'),
+		dependency('Carbon'),
+		dependency('CoreAudio'),
+		dependency('AudioToolbox'),
+		dependency('Foundation'),
+		dependency('GameController', required: false),
+		dependency('CoreHaptics', required: false),
+		dependency('Metal', required: false),
+		dependency('iconv'),
+	]
+else
+	extra_deps = []
+endif
+
 sdl2_dep = declare_dependency(
-	dependencies: sdl2_subprj.dependency('SDL2_static'),
+	dependencies: [
+		sdl2_subprj.dependency('SDL2_static'),
+		extra_deps,
+	],
 
 	# the meson cmake module isn't picking up on the fact that the SDL2_static
 	# target is generating headers that later build steps depend on. so here we
