@@ -1,0 +1,5 @@
+[wrap-git]
+url = https://github.com/thedmd/imgui-node-editor
+revision = 2f99b2d613a400f6579762bd7e7c343a0d844158
+depth = 1
+patch_directory = imgui-node-editor
