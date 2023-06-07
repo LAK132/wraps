@@ -13,6 +13,9 @@ imgui_node_editor = static_library(
 		'imgui_node_editor_api.cpp',
 		'crude_json.cpp',
 	],
+	override_options: [
+		'cpp_std=c++14',
+	],
 	include_directories: includes,
 	dependencies: subproject('imgui-wrap').get_variable('imgui_dep'),
 )
