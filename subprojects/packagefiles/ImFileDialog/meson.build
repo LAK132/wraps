@@ -14,7 +14,10 @@ im_file_dialog = static_library(
 		'cpp_std=c++17',
 	],
 	include_directories: includes,
-	dependencies: subproject('imgui-wrap').get_variable('imgui_dep'),
+	dependencies: [
+		subproject('imgui-wrap').get_variable('imgui_dep'),
+		subproject('stb').get_variable('stb_image_dep'),
+	],
 )
 
 im_file_dialog_dep = declare_dependency(
