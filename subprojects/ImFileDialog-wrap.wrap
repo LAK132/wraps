@@ -1,6 +1,5 @@
 [wrap-git]
 url = https://github.com/LAK132/ImFileDialog
-revision = a4753476b1bdb22566d6913924206326704dc2cf
+revision = bd95876b5d3106fd1abff05ec86cdce2bcf2a3c8
 depth = 1
 patch_directory = ImFileDialog
-diff_files = 0001-Fix-path-to-imgui-headers.patch, 0002-Don-t-implement-stb_image-inside-ImFileDialog.patch
