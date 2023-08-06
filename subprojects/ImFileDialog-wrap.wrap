@@ -1,5 +1,5 @@
 [wrap-git]
-url = https://github.com/dfranx/ImFileDialog
+url = https://github.com/LAK132/ImFileDialog
 revision = a4753476b1bdb22566d6913924206326704dc2cf
 depth = 1
 patch_directory = ImFileDialog
