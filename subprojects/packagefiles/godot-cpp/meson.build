@@ -36,20 +36,24 @@ godot_cpp_build_dir = godot_cpp_build[0].full_path()/'..'
 
 subdir('bin')
 
+subdir('gen'/'include')
+
 godot_cpp = static_library(
 	'godot-cpp',
 	[
 		'empty.cpp',
+		godot_cpp_build_dep,
 	],
 	link_args: 'bin'/godot_cpp_output,
-	link_depends: cmake_generated_godot_cpp_lib,
 )
 
 godot_cpp_inc = include_directories(
+	'gdextension',
 	'include',
 )
 
 godot_cpp_dep = declare_dependency(
 	link_whole: godot_cpp,
-	include_directories: godot_cpp_inc,
+	include_directories: [godot_cpp_inc, godot_bind_gen_inc],
+	sources: godot_cpp_build_dep,
 )
