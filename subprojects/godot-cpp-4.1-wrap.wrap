@@ -1,0 +1,5 @@
+[wrap-git]
+url = https://github.com/godotengine/godot-cpp
+revision = df5b1a9a692b0d972f5ac3c853371594cdec420b
+depth = 1
+patch_directory = godot-cpp
