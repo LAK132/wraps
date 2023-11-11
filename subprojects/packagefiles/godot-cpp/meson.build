@@ -34,17 +34,15 @@ godot_cpp_build = custom_target(
 
 godot_cpp_build_dir = godot_cpp_build[0].full_path()/'..'
 
-godot_cpp_build_targets = [
-	'godot-cpp',
-]
-
 subdir('bin')
 
 godot_cpp = static_library(
 	'godot-cpp',
 	[
-		cmake_generated_godot_cpp_lib,
+		'empty.cpp',
 	],
+	link_args: 'bin'/godot_cpp_output,
+	link_depends: cmake_generated_godot_cpp_lib,
 )
 
 godot_cpp_inc = include_directories(
