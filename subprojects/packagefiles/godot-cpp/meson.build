@@ -44,7 +44,7 @@ godot_cpp = static_library(
 		'empty.cpp',
 		godot_cpp_build_dep,
 	],
-	link_args: 'bin'/godot_cpp_output,
+	link_with: cmake_generated_godot_cpp_lib,
 )
 
 godot_cpp_inc = include_directories(
