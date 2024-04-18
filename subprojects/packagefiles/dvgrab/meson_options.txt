@@ -1,0 +1,31 @@
+# LIBDV
+
+option('with-libdv',
+	type: 'boolean',
+	value: false,
+	yield: true,
+)
+
+# LIBQUICKTIME
+
+option('with-libquicktime',
+	type: 'boolean',
+	value: false,
+	yield: true,
+)
+
+# LIBJPEG
+
+option('with-libjpeg',
+	type: 'boolean',
+	value: false,
+	yield: true,
+)
+
+# EFENCE
+
+option('with-efence',
+	type: 'boolean',
+	value: false,
+	yield: true,
+)

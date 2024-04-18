@@ -1,0 +1,5 @@
+[wrap-git]
+url = https://github.com/ddennedy/dvgrab
+revision = 8a368f4904cb83df6555db04b3bdf7ddf8ac9f91
+depth = 1
+patch_directory = dvgrab
