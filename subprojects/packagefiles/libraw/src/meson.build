@@ -18,9 +18,21 @@ libraw_decoders = static_library(
 		'decoders'/'generic.cpp',
 		'decoders'/'kodak_decoders.cpp',
 		'decoders'/'load_mfbacks.cpp',
+		'decoders'/'olympus14.cpp',
+		'decoders'/'pana8.cpp',
 		'decoders'/'smal.cpp',
+		'decoders'/'sonycc.cpp',
 		'decoders'/'unpack_thumb.cpp',
 		'decoders'/'unpack.cpp',
+	],
+	override_options: override_options,
+	include_directories: includes,
+)
+
+libraw_decompressors = static_library(
+	'libraw-decompressors',
+	[
+		'decompressors'/'losslessjpeg.cpp',
 	],
 	override_options: override_options,
 	include_directories: includes,
@@ -166,6 +178,7 @@ if get_option('libraw_static_library')
 		],
 		link_with: [
 			libraw_decoders,
+			libraw_decompressors,
 			libraw_demosaic,
 			libraw_integration,
 			libraw_metadata,
@@ -188,6 +201,7 @@ else
 		],
 		link_with: [
 			libraw_decoders,
+			libraw_decompressors,
 			libraw_demosaic,
 			libraw_integration,
 			libraw_metadata,
