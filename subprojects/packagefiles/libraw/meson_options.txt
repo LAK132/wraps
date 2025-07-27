@@ -3,3 +3,9 @@ option('libraw_static_library',
 	value: true,
 	yield: true,
 )
+
+option('libraw_use_x3ftools',
+	type: 'boolean',
+	value: false,
+	yield: true,
+)

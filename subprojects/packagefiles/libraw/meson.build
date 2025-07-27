@@ -31,9 +31,13 @@ c_cpp_args += [
 ]
 
 if get_option('libraw_static_library')
-	c_cpp_args = [ '-DLIBRAW_NODLL' ]
+	c_cpp_args += [ '-DLIBRAW_NODLL' ]
 else
-	c_cpp_args = [ '-DLIBRAW_BUILDLIB' ]
+	c_cpp_args += [ '-DLIBRAW_BUILDLIB' ]
+endif
+
+if get_option('libraw_use_x3ftools')
+	c_cpp_args += [ '-DUSE_X3FTOOLS' ]
 endif
 
 if get_option('buildtype') != 'debug'
