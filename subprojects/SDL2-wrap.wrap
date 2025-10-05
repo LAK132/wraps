@@ -1,4 +1,4 @@
 [wrap-git]
 url = https://github.com/libsdl-org/SDL
-revision = release-2.24.0
+revision = release-2.32.10
 depth = 1
