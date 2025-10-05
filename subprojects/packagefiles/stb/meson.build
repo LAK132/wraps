@@ -3,6 +3,20 @@ project(
 	'c',
 )
 
+comp = meson.get_compiler('c')
+
+if comp.get_id() == 'msvc'
+	c_args = [
+	]
+else
+	c_args = [
+		'-Wno-unknown-warning-option',
+		'-Wno-incompatible-function-pointer-types',
+	]
+endif
+
+add_project_arguments(c_args, language: ['c'])
+
 incdir = include_directories('.')
 
 stb_c_lexer = static_library(
