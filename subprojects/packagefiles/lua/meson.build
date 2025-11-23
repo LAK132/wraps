@@ -1,9 +1,9 @@
 project(
-	'lua',
+	'lua-wrap',
 	'c',
 	meson_version: '>=0.62.0',
 	license: 'MIT',
 	version: '5.4.4',
 )
 
-subdir('src')
+subdir('lua-5.4.4'/'src')
