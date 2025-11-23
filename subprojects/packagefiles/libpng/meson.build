@@ -2,6 +2,7 @@ project(
 	'libpng-wrap',
 	'cpp',
 	meson_version: '>=0.55',
+	license: 'Libpng',
 	license_files: 'LICENSE',
 	version: 'v1.6.38',
 )
