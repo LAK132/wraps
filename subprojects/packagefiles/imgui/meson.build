@@ -1,6 +1,7 @@
 project(
 	'imgui-1.88-wrap',
 	'cpp',
+	license: 'MIT',
 	license_files: 'LICENSE.txt',
 	version: 'v1.88',
 )

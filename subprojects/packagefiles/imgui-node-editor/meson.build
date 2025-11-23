@@ -1,6 +1,7 @@
 project(
 	'imgui-node-editor-0.9.2-wrap',
 	'cpp',
+	license: 'MIT',
 	license_files: 'LICENSE',
 	version: 'v0.9.2',
 )

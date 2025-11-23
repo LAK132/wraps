@@ -1,6 +1,7 @@
 project(
 	'ImFileDialog-wrap',
 	'cpp',
+	license: 'MIT',
 	license_files: 'LICENSE',
 )
 
