@@ -16,7 +16,7 @@ imgui_color_text_edit = static_library(
 		'cpp_std=c++11',
 	],
 	include_directories: includes,
-	dependencies: subproject('imgui-wrap').get_variable('imgui_dep'),
+	dependencies: subproject('imgui-1.88-wrap').get_variable('imgui_dep'),
 )
 
 imgui_color_text_edit_dep = declare_dependency(

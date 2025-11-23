@@ -20,7 +20,7 @@ imgui_node_editor = static_library(
 		'cpp_std=c++14',
 	],
 	include_directories: includes,
-	dependencies: subproject('imgui-wrap').get_variable('imgui_dep'),
+	dependencies: subproject('imgui-1.88-wrap').get_variable('imgui_dep'),
 )
 
 imgui_node_editor_dep = declare_dependency(

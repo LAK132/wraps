@@ -17,7 +17,7 @@ im_file_dialog = static_library(
 	],
 	include_directories: includes,
 	dependencies: [
-		subproject('imgui-wrap').get_variable('imgui_dep'),
+		subproject('imgui-1.88-wrap').get_variable('imgui_dep'),
 		subproject('stb-f1c79c0').get_variable('stb_image_dep'),
 	],
 )
