@@ -109,6 +109,36 @@ stb_hexwave_dep = declare_dependency(
 	include_directories: incdir,
 )
 
+stb_image_resize2 = static_library(
+	'stb_image_resize2',
+	[
+		'stb_image_resize2.c',
+	],
+	c_args: [
+		# STBIR_ASSERT(X)
+		# STBIR_MALLOC
+		# STBIR_FREE
+		# STBIR_NO_SIMD
+		# STBIR_[NO_]SSE2
+		# STBIR_[NO_]AVX
+		# STBIR_[NO_]AVX2
+		# STBIR_FP16C
+		# STBIR_USE_FMA
+		# STBIR_FLOAT_LOW_CLAMP
+		# STBIR_FLOAT_HIGH_CLAMP
+		# STBIR_DEFAULT_FILTER_UPSAMPLE
+		# STBIR_DEFAULT_FILTER_DOWNSAMPLE
+		# STBIR_CEILF
+		# STBIR_FLOORF
+	],
+	include_directories: incdir,
+)
+
+stb_image_resize2_dep = declare_dependency(
+	link_with: stb_image_resize2,
+	include_directories: incdir,
+)
+
 stb_image_resize = static_library(
 	'stb_image_resize',
 	[
