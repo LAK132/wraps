@@ -2,6 +2,8 @@ project(
 	'llvm-wrap',
 	'cpp',
 	meson_version: '>=0.55',
+	license: 'Apache-2.0 WITH LLVM-exception',
+	license_files: 'LICENSE.TXT',
 	version: '15.0.1',
 )
 
