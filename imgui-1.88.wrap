@@ -1,0 +1,7 @@
+[wrap-git]
+url = https://github.com/LAK132/wraps
+revision = bbbcee955dbd0629a449921e7bd31a1a5e8a34c7
+depth = 1
+
+[provide]
+dependency_names = imgui-1.88, imgui-node-editor-0.9.2, imgui_color_text_edit, im_file_dialog
