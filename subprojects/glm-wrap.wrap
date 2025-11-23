@@ -1,5 +1,5 @@
 [wrap-git]
 url = https://github.com/g-truc/glm
-revision = cc98465e3508535ba8c7f6208df934c156a018dc
+revision = 1.0.2
 depth = 1
 patch_directory = glm
