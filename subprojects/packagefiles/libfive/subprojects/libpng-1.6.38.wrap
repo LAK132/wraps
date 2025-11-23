@@ -1,0 +1,7 @@
+[wrap-git]
+url = https://github.com/LAK132/wraps
+revision = e2d734b6a72c375d72b7190166d1213a279171c5
+depth = 1
+
+[provide]
+dependency_names = libpng-1.6.38

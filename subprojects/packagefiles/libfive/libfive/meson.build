@@ -1,4 +1,3 @@
-
 cmake = import('cmake')
 
 # --- eigen ---
@@ -18,7 +17,7 @@ if meson.get_compiler('cpp').has_argument('bigobj')
 	eigen_opts.append_compile_args('cpp', '-bigobj')
 endif
 
-eigen_subprj = cmake.subproject('eigen', options: eigen_opts)
+eigen_subprj = cmake.subproject('eigen-3.4.0', options: eigen_opts)
 
 eigen_dep = [
 	# eigen_subprj.dependency('eigen'),
@@ -27,7 +26,7 @@ eigen_dep = [
 
 # --- libpng ---
 
-libpng_subprj = subproject('libpng')
+libpng_subprj = subproject('libpng-1.6.38')
 
 libpng_dep = libpng_subprj.get_variable('libpng_dep')
 
@@ -44,7 +43,7 @@ if meson.get_compiler('cpp').has_argument('bigobj')
 	boost_opts.append_compile_args('cpp', '-bigobj')
 endif
 
-boost_subprj = cmake.subproject('boost', options: boost_opts)
+boost_subprj = cmake.subproject('boost-1.80.0', options: boost_opts)
 
 boost_dep = [
 	boost_subprj.dependency('boost_bimap'),
