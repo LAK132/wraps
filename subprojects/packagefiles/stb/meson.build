@@ -1,6 +1,8 @@
 project(
 	'stb-wrap',
 	'c',
+	license_files: 'LICENSE',
+	version: 'f1c79c02822848a9bed4315b12c8c8f3761e1296',
 )
 
 comp = meson.get_compiler('c')
@@ -253,8 +255,33 @@ stb_truetype_dep = declare_dependency(
 	include_directories: incdir,
 )
 
-stb_dep = declare_dependency(
-	include_directories: [
-		'.',
+stb_vorbis = static_library(
+	'stb_vorbis',
+	[
+		'stb_vorbis.c',
 	],
+	c_args: [
+		# STB_VORBIS_NO_PUSHDATA_API
+		# STB_VORBIS_NO_PULLDATA_API
+		# STB_VORBIS_NO_STDIO
+		# STB_VORBIS_NO_INTEGER_CONVERSION
+		# STB_VORBIS_NO_FAST_SCALED_FLOAT
+		# STB_VORBIS_MAX_CHANNELS
+		# STB_VORBIS_PUSHDATA_CRC_COUNT
+		# STB_VORBIS_FAST_HUFFMAN_LENGTH
+		# STB_VORBIS_FAST_BINARY_LENGTH
+		# STB_VORBIS_FAST_HUFFMAN_INT
+		# STB_VORBIS_NO_HUFFMAN_BINARY_SEARCH
+		# STB_VORBIS_DIVIDES_IN_RESIDUE
+		# STB_VORBIS_DIVIDES_IN_CODEBOOK
+		# STB_VORBIS_DIVIDE_TABLE
+		# STB_VORBIS_NO_INLINE_DECODE
+		# STB_VORBIS_NO_DEFER_FLOOR
+	],
+	include_directories: incdir,
+)
+
+stb_vorbis_dep = declare_dependency(
+	link_with: stb_vorbis,
+	include_directories: incdir,
 )
