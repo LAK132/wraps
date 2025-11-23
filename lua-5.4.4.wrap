@@ -1,6 +1,6 @@
 [wrap-git]
 url = https://github.com/LAK132/wraps
-revision = 123eaf81cbf7348c84553c6b20cad5bb1a947a55
+revision = 6ba7ea05a54af28fd703b7473e6be5ad24cd82ab
 depth = 1
 
 [provide]
