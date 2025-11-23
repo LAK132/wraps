@@ -1,6 +1,7 @@
 project(
 	'stb-wrap',
 	'c',
+	license: 'MIT OR Unlicense',
 	license_files: 'LICENSE',
 	version: 'f1c79c02822848a9bed4315b12c8c8f3761e1296',
 )
