@@ -2,6 +2,8 @@ project(
 	'libgphoto2-wrap',
 	'c',
 	meson_version: '>=0.59',
+	license: 'LGPL-2.1-or-later',
+	license_files: 'COPYING',
 )
 
 includes = include_directories('.', 'libgphoto2_port')
