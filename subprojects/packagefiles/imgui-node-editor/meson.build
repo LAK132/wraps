@@ -1,6 +1,8 @@
 project(
-	'imgui-node-editor-wrap',
-	['cpp'],
+	'imgui-node-editor-0.9.2-wrap',
+	'cpp',
+	license_files: 'LICENSE',
+	version: 'v0.9.2',
 )
 
 includes = include_directories('.')

@@ -1,6 +1,8 @@
 project(
-	'imgui-wrap',
+	'imgui-1.88-wrap',
 	'cpp',
+	license_files: 'LICENSE.txt',
+	version: 'v1.88',
 )
 
 includes = include_directories(

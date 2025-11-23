@@ -1,6 +1,7 @@
 project(
 	'ImGuiColorTextEdit-wrap',
 	'cpp',
+	license_files: 'LICENSE',
 )
 
 includes = include_directories('.')
