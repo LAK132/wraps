@@ -1,0 +1,8 @@
+[wrap-git]
+url = https://github.com/LAK132/wraps
+revision = 123eaf81cbf7348c84553c6b20cad5bb1a947a55
+depth = 1
+
+[provide]
+dependency_names = lua-5.4.4-core, lua-5.4.4
+program_names = lua-5.4.4, luac-5.4.4
