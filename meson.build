@@ -60,3 +60,4 @@ sdl2_dep = declare_dependency(
 		command: [find_program('python3'), '-c', ''],
 	),
 )
+meson.override_dependency('SDL2-2.32.10', sdl2_dep)
