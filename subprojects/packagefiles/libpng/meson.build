@@ -2,6 +2,8 @@ project(
 	'libpng-wrap',
 	'cpp',
 	meson_version: '>=0.55',
+	license_files: 'LICENSE',
+	version: 'v1.6.38',
 )
 
 cmake = import('cmake')
@@ -13,7 +15,7 @@ zlib_opts = cmake.subproject_options()
 zlib_opts.add_cmake_defines({
 })
 
-zlib_subprj = cmake.subproject('zlib', options: zlib_opts)
+zlib_subprj = cmake.subproject('zlib-1.2.13', options: zlib_opts)
 # zlib_dep
 # zlibstatic_dep
 # minigzip_exe

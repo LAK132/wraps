@@ -1,5 +1,5 @@
 [wrap-git]
-url = https://github.com/glennrp/libpng
+url = https://github.com/pnggroup/libpng
 revision = v1.6.38
 depth = 1
 patch_directory = libpng
