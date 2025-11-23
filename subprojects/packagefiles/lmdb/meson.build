@@ -1,7 +1,11 @@
 project(
 	'lmdb-wrap',
 	'c',
-	license_files: 'libraries'/'liblmdb'/'LICENSE',
+	license: 'OLDAP-2.8',
+	license_files: [
+		'libraries'/'liblmdb'/'LICENSE',
+		'libraries'/'liblmdb'/'COPYRIGHT',
+	],
 	version: '0.9.31',
 )
 
