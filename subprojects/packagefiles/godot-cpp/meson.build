@@ -2,6 +2,9 @@ project(
 	'godot-cpp-wrap',
 	'cpp',
 	meson_version: '>=0.61',
+	license: 'MIT',
+	license_files: 'LICENSE.md',
+	version: '4.1',
 )
 
 cmake = find_program('cmake')
