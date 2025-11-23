@@ -1,6 +1,8 @@
 project(
 	'lmdb-wrap',
 	'c',
+	license_files: 'libraries'/'liblmdb'/'LICENSE',
+	version: '0.9.31',
 )
 
 if target_machine.system() == 'windows'
